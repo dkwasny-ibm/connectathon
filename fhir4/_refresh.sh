@@ -3,16 +3,13 @@
 tooling_jar=tooling-1.1.1-SNAPSHOT-jar-with-dependencies.jar
 input_cache_path=./input-cache
 
-#fhir_server_prefix="https://cqm-sandbox.alphora.com/cqf-ruler-r4/fhir/";
-fhir_server_prefix="http://localhost:8080/baseR4/";
-
 set -e
 echo Checking internet connection...
 wget -q --spider tx.fhir.org
 
 if [ $? -eq 0 ]; then
 	echo "Online"
-	fsoption="-fs $fhir_server_prefix"
+	fsoption="-fs http://cqm-sandbox.alphora.com/cqf-ruler-r4/fhir/"
 else
 	echo "Offline"
 	fsoption=""
