@@ -6,7 +6,7 @@ ig_resource_path=./input/connectathon.xml
 #measure_to_refresh_path=$PWD/input/resources/measure/measure-EXM104-8.2.000.json
 
 #fhir_server_prefix="https://cqm-sandbox.alphora.com/cqf-ruler-r4/fhir/";
-fhir_server_prefix="http://localhost:8080/baseR4/";
+fhir_server_prefix="http://localhost:8080/cqf-ruler-r4/fhir";
 
 set -e
 echo Checking internet connection...
